@@ -2,6 +2,9 @@
 import dotenv from "dotenv";
 import connectDB from "./db/index.js";
 
+import app from "./app.js";
+import express from "express";
+
 dotenv.config({ path: "./.env" });
 
 // import mongoose from "mongoose";
@@ -23,6 +26,8 @@ connectDB()
     console.error("MONGODB ERROR: Error connecting to the database", err);
 })
 
+
+export  default app;
 
 
 
